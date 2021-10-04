@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="icon" href="data:,">
+    <title>Lowson</title>
+</head>
+<body>
+    <h2>Webapp for Airfoil Turbulent Inflow Noise Prediction</h2>
+    <form method="POST">
+        <div class='external-grid'>
+            <div class='grid-container'>
+                <div class="grid-item"><label>c [m]:  </label><input name="c", type="number", value="{{ c }}", step="0.001"></div>
+                <div class="grid-item"><label>s [m]:  </label><input name="s", type="number", value="{{ s }}", step="0.001"></div>
+                <div class="grid-item"><label>U [m/s]:    </label><input name="U", type="number", value="{{ U }}", step="0.010"></div>
+                <div class="grid-item"><label>I:  </label><input name="I", type="number", value="{{ I }}", step="0.010"></div>
+                <div class="grid-item"><label>&#923 [m]: </label><input name="Lambda", type="number", value="{{ Lambda }}", step="0.001"></div>
+                <div class="grid-item"><label>&#945 [°]:  </label><input name="alpha", type="number", value="{{ alpha }}", step="0.010"></div>
+                <div class="grid-item"><label>r<sub>e</sub> [m]:    </label><input name="r_e", type="number", value="{{ r_e }}", step="0.010"></div>
+                <div class="grid-item"><label>&#966 [°]:    </label><input name="phi", type="number", value="{{ phi }}", step="0.010"></div>
+                <div class="grid-item"><label>&#952 [°]:  </label><input name="theta", type="number", value="{{ theta }}", step="0.010"></div>
+                <input type="submit", value="Calculate">
+            </div>
+            <div class="graph"><img src={{ image }} /></div>
+        </div>
+    </form>
+    <p><a href="http://ec2-54-167-116-126.compute-1.amazonaws.com:8888/about">About</a></p>
+</body>
+</html>
